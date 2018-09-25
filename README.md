@@ -1,1 +1,1 @@
-# com.rapidIteration.www
+# com.rapid-iteration.www
