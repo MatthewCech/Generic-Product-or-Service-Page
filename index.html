@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Configure meta tags accordingly. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Set up title, favicon, and description -->
+    <title>Iteration</title>
+    <link rel="shortcut icon" href="assets/folder-open.ico">
+    <meta name="description" content="This is a description">
+    <meta name="author" content="Matthew Cech">
+
+    <!-- Go ahead and grab Bootstrap and Fontawesome. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </head>
+
+
+  <!-- Stylesheet added here for ease of iteration. Consider moving to a separate file. -->
+  <style>
+    /* Built-in */
+    body {
+      background-image: url('assets/squairy_light.png');
+    }
+
+
+    /* Bootstrap classes being adjusted */
+    .jumbotron {
+      border-radius: 7px;
+      background-color: rgba(200,200,200,0);
+      text-align: center;
+    }
+
+
+    /* Custom-made classes */
+    .iteration-showcase-img {
+      max-width: 200px;
+      border-radius: 250px;
+      margin-left: 10px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .iteration-showcase-text {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .iteration-showcase-title {
+      margin-top: 20px;
+    }
+
+    .iteration-social-link {
+      width: 40px;
+    }
+
+    .iteration-showcase-col {
+      margin-bottom: 30px;  
+    }
+    .iteration-maring-left-fix {
+      margin-left: -2px;
+    }
+  </style>
+
+
+  <!-- This is the body of the site: This is what's displayed in the browser! -->
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+
+        <h1>3D Printing on Demand</h1> 
+        <p>Imagine cool stuff. Make cool stuff.</p> 
+        <hr/>
+
+        <!-- columns start -->
+        <div class="row text-center"> 
+
+          <!-- Column -->
+          <div class="col-md-4 iteration-showcase-col">
+            <i class="far fa-clock fa-5x"></i>
+            <h5 class="iteration-showcase-text">Project Name</h5> <!-- Place inside h5 tag for link <a href="#"><i class="fas fa-link"></i></a> -->
+            <p class="text-left iteration-showcase-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<p>
+          </div>
+          
+          <!-- Column -->
+          <div class="col-md-4 iteration-showcase-col">
+            <i class="far fa-lightbulb fa-5x"></i>
+             <h5 class="iteration-showcase-text">Another Project</h5>
+            <p class="text-left iteration-showcase-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<p>
+          </div>
+          
+          <!-- Column -->
+          <div class="col-md-4 iteration-showcase-col">
+            <i class="fas fa-hand-holding-usd fa-5x"></i>
+             <h5 class="iteration-showcase-text">Third Project</h5>
+            <p class="text-left iteration-showcase-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<p>
+          </div>
+
+        </div> 
+        <!-- columns end -->
+
+      </div>
+    </div>
+  </body>
+</html>
