@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Pass 1, Rough. -->
 <html>
   <head>
     <!-- Configure meta tags accordingly. -->
@@ -8,18 +8,17 @@
 
     <!-- Set up title, favicon, and description -->
     <title>Fabulous Page</title>
-    <link rel="shortcut icon" href="media/cube.ico">
-    <meta name="description" content="Make cool things">
-    <meta name="author" content="Matthew Cech">
+    <link rel="shortcut icon" href="media/favicon.ico">
+    <meta name="description" content="Description Here">
+    <meta name="author" content="Author Here">
 
-    <!-- Go ahead and grab Bootstrap and Fontawesome. -->
-    <link rel="stylesheet" href="assets/bootstrap.min.css">    <!-- Bootstrap core CSS -->
+    <!-- External -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   </head>
 
-
-  <!-- Stylesheet added here for ease of iteration. Consider moving to a separate file. -->
+  <!-- Inline, move external if > 1 page -->
   <style>
     /* Built-in */
     body {
@@ -36,17 +35,20 @@
     }
 
     .flexgrid-row {
-        display: -ms-flexbox; /* IE10 */
+        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap; /* IE10 */
+
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+
         padding: 0 4px;
     }
 
-    /* Create four equal columns that sits next to each other */
+    /* 4 col */
     .flexgrid-column {
-        -ms-flex: 25%; /* IE10 */
+        -ms-flex: 25%;
         flex: 25%;
+
         max-width: 25%;
         padding: 0 4px;
     }
@@ -56,7 +58,7 @@
         vertical-align: middle;
     }
 
-    /* Responsive layout - makes a two column-layout instead of four columns */
+    /* Stack double */
     @media screen and (max-width: 800px) {
         .flexgrid-column {
             -ms-flex: 50%;
@@ -65,7 +67,7 @@
         }
     }
 
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    /* Stack single */
     @media screen and (max-width: 600px) {
         .flexgrid-column {
             -ms-flex: 100%;
@@ -74,14 +76,13 @@
         }
     }
 
-    /* Bootstrap classes being adjusted */
+    /* Adjust bootstrap */
     .jumbotron {
       border-radius: 7px;
       background-color: rgba(200,200,200,0);
       text-align: center;
     }
 
-    /* Custom-made classes */
     .iteration-showcase-img {
       max-width: 200px;
       border-radius: 250px;
@@ -117,9 +118,8 @@
     }
   </style>
 
-
-  <!-- This is the body of the site: This is what's displayed in the browser! -->
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
     <!-- Navbar Begin -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#"><i class="fas fa-cube"></i> Brand</a>
@@ -140,7 +140,7 @@
         </ul>
       </div>
     </nav>
-    <!-- Navbar Begin -->
+    <!-- Navbar End -->
 
 
     <!-- Body Begin -->
@@ -250,6 +250,7 @@
         <hr/>
         <br/><br/><br/>
 
+        <!-- TODO make anon email -->
         <footer>
           <p>I own dis, copyright me 2018-3038 : legal / TOS link here</p>
           <p>Beep boop admin concerns here or footer text <a href="mailto:someone@example.com">admin@nice-website.doot</a></p>
@@ -265,16 +266,19 @@
     <!-- Script Begin -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/assets/bootstrap.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
     <script>
     $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
+
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
         if (target.length) {
           $('html, body').animate({
             scrollTop: target.offset().top
           }, 333);
+
           return false;
         }
       }
